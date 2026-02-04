@@ -1,7 +1,7 @@
 package com.hexagonal.api.adapter.in.web.controller;
 
 import com.hexagonal.api.adapter.in.web.dto.CriarItemCompraRequestDTO;
-import com.hexagonal.api.adapter.in.web.dto.ItemCompraResponseDTO;
+import com.hexagonal.api.adapter.in.web.dto.CriarItemCompraResponseDTO;
 import com.hexagonal.api.application.usecase.CriarItemCompraUseCase;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +21,8 @@ public class ItemCompraController {
     }
 
     @PostMapping(value = "/criar-item-compra")
-    public ResponseEntity<ItemCompraResponseDTO> criarItemCompra(
-            @RequestBody @Valid CriarItemCompraRequestDTO request) {
+    public ResponseEntity<CriarItemCompraResponseDTO> criarItemCompra(
+            @RequestBody @Valid CriarItemCompraRequestDTO requestDTO) {
         try {
 
 
